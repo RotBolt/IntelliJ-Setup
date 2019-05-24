@@ -1,0 +1,36 @@
+Download Java 8 jdk (Skip this step if installed)
+https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+To set java on Linux 
+
+1) move tar.gz file to required location and run this command
+
+$ sudo tar xvzf YOUR_JDK_DOWNLOADED_FILE.tar.gz 
+
+2) now to set your JAVA_HOME environment variable by these :
+
+$ JAVA_HOME=/usr/java/jdk_YOUR_VERSION_NAME/
+$ sudo update-alternatives --install /usr/bin/java java ${JAVA_HOME%*/}/bin/java 20000
+$ sudo update-alternatives --install /usr/bin/javac javac ${JAVA_HOME%*/}/bin/javac 20000
+
+
+To set default java
+
+$ update-alternatives --config java
+ 
+a output showing different jdks available on system appears like this
+
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                           Priority   Status
+------------------------------------------------------------
+* 0            /opt/java/jdk1.8.0_05/bin/java                  20000     auto mode
+  1            /opt/java/jdk1.8.0_05/bin/java                  20000     manual mode
+  2            /usr/lib/jvm/java-6-openjdk-i386/jre/bin/java   1061      manual mode
+
+Press enter to keep the current choice[*], or type selection number:
+
+
+
+Download IntelliJ from Here
+https://www.jetbrains.com/idea/download
